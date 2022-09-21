@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.CircularProgressIndicator
+import androidx.compose.material.Divider
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -24,7 +25,7 @@ import com.plcoding.cryptocurrencyappyt.presentation.coin_detail.components.Team
 import com.plcoding.cryptocurrencyappyt.presentation.coin_list.components.CoinListItem
 
 @Composable
-fun CoinListScreen(
+fun CoinDetailScreen(
     viewModel: CoinDetailViewModel = hiltViewModel()
 ) {
     val state = viewModel.state.value
@@ -83,6 +84,7 @@ fun CoinListScreen(
                             .fillMaxWidth()
                             .padding(10.dp)
                     )
+                    Divider()
                 }
             }
         }
